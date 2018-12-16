@@ -2,6 +2,9 @@ import React from 'react'
 import Content from "./Content";
 import ActionBar from "./ActionBar";
 import { Text, StyleSheet, View} from 'react-native'
+import Question from "./Question";
+import Answer from "./Answer";
+import Score from "./Score";
 
 export default class Game extends React.Component {
     // constructor(props) {
@@ -24,14 +27,26 @@ export default class Game extends React.Component {
         // console.log(this.props.fetch);
 
         if(this.props.fetch.fetching){
-            return <Text style={style.h3}> Wait while we fetch </Text>
+            return <Text style={styles.h3}> Wait while we fetch </Text>
         } else if(this.props.fetch.fetching === false && this.props.fetch.error){
             console.log(this.props.fetch.error);
-            return <Text style={style.h3}> Error getting state from server </Text>
+            return <Text style={styles.h3}> Error getting state from server </Text>
         } else {
             return(
                 <View>
-
+                    <Content
+                        currentQuestion={this.props.currentQuestion}
+                        currentIndex = {this.props.currentIndex}
+                        onIntroduceAnswerGame = {this.props.onIntroduceAnswer}
+                        finished = {this.props.finished}
+                        score = {this.props.score}
+                    />
+                    <ActionBar
+                        onChangeQuestion = {this.props.onChangeQuestion}
+                        currentIndex = {this.props.currentIndex}
+                        questionsLength = {this.props.questionsLength}
+                        onSubmit = {this.props.onSubmit}
+                    />
                 </View>
             )
         }

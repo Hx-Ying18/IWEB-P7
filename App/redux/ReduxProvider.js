@@ -6,9 +6,10 @@ import {compose, createStore, applyMiddleware} from 'redux';
 import React from 'react';
 
 import thunk from 'redux-thunk'
+import { Text, StyleSheet, View, Image, TouchableHighlight} from 'react-native'
 
 // Import questions
-import { questions } from "../../../iweb_p7/src/assets/mock-data";
+import { questions } from "../../assets/mock-data"
 import GameScreen from "../components/GameScreen";
 
 export default class ReduxProvider extends React.Component{
@@ -33,9 +34,9 @@ export default class ReduxProvider extends React.Component{
     render() {
         return (
             <Provider store={this.store}>
-                <div style={{ height: '100%'}}>
+                <View>
                     <GameScreen />
-                </div>
+                </View>
             </Provider>
         )
     }

@@ -2,15 +2,17 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
 import ReduxProvider from "./App/redux/ReduxProvider";
+//
+// <Text style={{fontSize: 30}}>
+//     Worksss
+// </Text>
 
 export default class App extends React.Component {
   render() {
     return (
         <View>
-          <ReduxProvider/>
-          <Text>
-            Worksss
-          </Text>
+            <ReduxProvider/>
+
         </View>
 
     );

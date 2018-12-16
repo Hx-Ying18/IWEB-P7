@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../GameScreen.css';
+
 
 import Game from './Game'
 
@@ -8,7 +8,7 @@ import { connect } from 'react-redux';
 import {changeQuestion, fetchState, introduceAnswer, submit} from "../redux/actions";
 import NavBar from "./NavBar";
 
-import { View } from 'react-native'
+import { Text, StyleSheet, View, Image, TouchableHighlight} from 'react-native'
 
 class GameScreen extends Component {
 
@@ -28,8 +28,8 @@ class GameScreen extends Component {
     }
 
   render() {
-    console.log('Props in GameScreen')
-    console.log(this.props);
+    // console.log('Props in GameScreen')
+    // console.log(this.props);
       // It is checked it is changed the first userAnswer
     //console.log(this.props.questions[this.props.indexCurrentQuestion])
       // In Game i say to create as props the question i want to handle
@@ -38,7 +38,7 @@ class GameScreen extends Component {
       // console.log(this.props.questions.length);
 
     return (
-      <View style={{flex:1, margin:10, justifyContent:'center'}}>
+      <View>
         <NavBar/>
         <Game
             currentQuestion={this.props.questions[this.props.indexCurrentQuestion]}

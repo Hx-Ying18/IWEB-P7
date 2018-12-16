@@ -1,5 +1,4 @@
 import React from 'react'
-import '../assets/styles/index.css'
 import { Text, StyleSheet, View, Image, TouchableHighlight} from 'react-native'
 
 export default class ActionBar extends React.Component {
@@ -17,15 +16,16 @@ export default class ActionBar extends React.Component {
         // If it's index is the first it disable the button
         return(
             <View>
-
-                <TouchableHighlight  onPress ={() => {
+                <TouchableHighlight onPress ={() => {
                     if ((this.props.currentIndex ) !== 0) {
                         this.props.onChangeQuestion('previuosQ')
                     }
                 }
                 }
                 >
-                    Previous
+                    <Text style={styles.h2}>
+                        Previous
+                    </Text>
                 </TouchableHighlight>
 
                 <TouchableHighlight onPress={ () => {
@@ -33,7 +33,10 @@ export default class ActionBar extends React.Component {
                     }
                 }
                 >
-                    Submit
+                    <Text style={styles.h2}>
+                        Submit
+                    </Text>
+
                 </TouchableHighlight>
 
                 <TouchableHighlight
@@ -45,10 +48,20 @@ export default class ActionBar extends React.Component {
                     }
                 }
                 >
-                    Next
+                    <Text style={styles.h2}>
+                        Next
+                    </Text>
                 </TouchableHighlight>
 
             </View>
         )
     }
 }
+
+const styles = StyleSheet.create({
+    h2:{
+        textAlign: 'center',
+        fontSize: 16,
+        padding: 10
+    }
+});
