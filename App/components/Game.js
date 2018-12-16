@@ -33,6 +33,7 @@ export default class Game extends React.Component {
             return <Text style={styles.h3}> Error getting state from server </Text>
         } else {
             return(
+
                 <View>
                     <Content
                         currentQuestion={this.props.currentQuestion}
