@@ -1,18 +1,33 @@
 import React from "react"
+import { Text, StyleSheet, View} from 'react-native'
 
 export default class NavBar extends React.Component {
     render() {
         return(
-            <header>
-                <h1> RandomQuiz</h1>
-                <h3>
+            <View>
+                <Text style={styles.h1}>
+                    RandomQuiz
+                </Text>
+
+                <Text style={styles.h2}>
                     Hengxuan Ying y Adrián Blázquez
-                </h3>
-                <nav>
+                </Text>
 
-                </nav>
-            </header>
-
+            </View>
         );
     }
+
 }
+
+const styles = StyleSheet.create({
+    h1:{
+        textAlign: 'center',
+        fontSize: 25,
+        padding: 10
+    },
+    h2:{
+        textAlign: 'center',
+        fontSize: 16,
+        padding: 10
+    }
+});

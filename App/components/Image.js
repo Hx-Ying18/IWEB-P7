@@ -5,13 +5,13 @@ export default class Imagen extends React.Component {
     render(){
         return(
             <div>
-                <div>
+                <View>
                     <img
                     src={this.props.question.attachment.url} alt={this.props.question.filename}
                     style={{flex:1, height: '80%', width: '80%'}}
                     resizeMode="center"
                     />
-                </div>
+                </View>
             </div>
         )
     }
