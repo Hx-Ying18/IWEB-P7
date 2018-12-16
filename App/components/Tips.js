@@ -1,4 +1,5 @@
 import React from 'react'
+import { Text, StyleSheet, View, Image, TextInput, FlatList} from 'react-native'
 
 export default class Tips extends React.Component {
 
@@ -8,16 +9,12 @@ export default class Tips extends React.Component {
         // console.log('It gets the onIntroduceAnswer in Answer');
         // console.log(this.props.onIntroduceAnswer);
         return(
-            <div>
-                {this.props.currentQuestion.tips.map((tip, i) => {
-                    return(
-                        <div key = {'' +i}>
-                            - {tip}
-                        </div>
-                        )
-                })
+            <FlatList
+                data={this.props.currentQuestion.tips}
+                renderItem={({item}) =>
+                    <Text style={{fontSize: 30}}> {item.key} </Text>
                 }
-            </div>
+            />
         )
 
     }
