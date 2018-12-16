@@ -24,29 +24,25 @@ export default class Game extends React.Component {
         // console.log(this.props.fetch);
 
         if(this.props.fetch.fetching){
-            return <h3> Wait while we fetch </h3>
+            return <Text style={style.h3}> Wait while we fetch </Text>
         } else if(this.props.fetch.fetching === false && this.props.fetch.error){
             console.log(this.props.fetch.error);
-            return <h3> Error getting state from server </h3>
+            return <Text style={style.h3}> Error getting state from server </Text>
         } else {
             return(
                 <View>
-                    <Content
-                        currentQuestion={this.props.currentQuestion}
-                        currentIndex = {this.props.currentIndex}
-                        onIntroduceAnswerGame = {this.props.onIntroduceAnswer}
-                        finished = {this.props.finished}
-                        score = {this.props.score}
-                    />
-                    <ActionBar
-                        onChangeQuestion = {this.props.onChangeQuestion}
-                        currentIndex = {this.props.currentIndex}
-                        questionsLength = {this.props.questionsLength}
-                        onSubmit = {this.props.onSubmit}
-                    />
+
                 </View>
             )
         }
 
     }
 }
+
+const styles = StyleSheet.create({
+    h3:{
+        textAlign: 'center',
+        fontSize: 10,
+        padding: 10
+    }
+});
