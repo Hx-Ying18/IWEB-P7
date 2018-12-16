@@ -1,6 +1,7 @@
 import React from 'react'
 import Content from "./Content";
 import ActionBar from "./ActionBar";
+import { Text, StyleSheet, View} from 'react-native'
 
 export default class Game extends React.Component {
     // constructor(props) {
@@ -29,7 +30,7 @@ export default class Game extends React.Component {
             return <h3> Error getting state from server </h3>
         } else {
             return(
-                <div>
+                <View>
                     <Content
                         currentQuestion={this.props.currentQuestion}
                         currentIndex = {this.props.currentIndex}
@@ -43,7 +44,7 @@ export default class Game extends React.Component {
                         questionsLength = {this.props.questionsLength}
                         onSubmit = {this.props.onSubmit}
                     />
-                </div>
+                </View>
             )
         }
 

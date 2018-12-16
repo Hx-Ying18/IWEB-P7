@@ -1,4 +1,5 @@
 import React from 'react'
+import { Text, StyleSheet, View} from 'react-native'
 
 export default class Question extends React.Component {
     // constructor(props) {
@@ -11,10 +12,24 @@ export default class Question extends React.Component {
         // console.log(this.props.currentIndex);
 
         return(
-            <div>
-                <h1>Question {this.props.currentIndex + 1} </h1>
-                <h2>{this.props.currentQuestion.question} </h2>
-            </div>
+            <View>
+                <Text style={styles.h2}>Question {this.props.currentIndex + 1} </Text>
+                <Text style={styles.h3}>{this.props.currentQuestion.question} </Text>
+            </View>
         )
     }
 }
+
+const styles = StyleSheet.create({
+
+    h2:{
+        textAlign: 'center',
+        fontSize: 16,
+        padding: 10
+    },
+    h3:{
+        textAlign: 'center',
+        fontSize: 10,
+        padding: 10
+    }
+});

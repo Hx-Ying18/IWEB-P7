@@ -1,4 +1,5 @@
 import React from 'react'
+import { Text, StyleSheet, View, Image} from 'react-native'
 
 export default class Imagen extends React.Component {
     // style={{flex:1, height: undefined, width: undefined}}
@@ -6,9 +7,9 @@ export default class Imagen extends React.Component {
         return(
             <div>
                 <View>
-                    <img
-                    src={this.props.question.attachment.url} alt={this.props.question.filename}
-                    style={{flex:1, height: '80%', width: '80%'}}
+                    <Image
+                    source={this.props.question.attachment.url} alt={this.props.question.filename}
+                    style={{flex:1}}
                     resizeMode="center"
                     />
                 </View>

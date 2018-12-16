@@ -4,6 +4,8 @@ import Answer from "./Answer";
 import Imagen from "./Image";
 import Score from './Score'
 import "../assets/styles/index.css"
+import { Text, StyleSheet, View} from 'react-native'
+
 export default class Content extends React.Component {
 
     render(){
@@ -12,8 +14,8 @@ export default class Content extends React.Component {
         // console.log('It gets the onIntroduceAnswer in Content');
         // console.log(this.props.onIntroduceAnswerGame);
         return(
-            <div className="flex-container">
-                <div>
+            <View style={{flex: 1}}>
+                <View style={{flex:1}}>
                     <Question
                         currentIndex = {this.props.currentIndex}
                         currentQuestion={this.props.currentQuestion}
@@ -26,11 +28,9 @@ export default class Content extends React.Component {
                         score = {this.props.score}
                         finished = {this.props.finished}
                     />
-                </div>
-                <div>
                     <Imagen question={this.props.currentQuestion}/>
-                </div>
-            </div>
+                </View>
+            </View>
         )
     }
 }

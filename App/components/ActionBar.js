@@ -1,5 +1,6 @@
 import React from 'react'
 import '../assets/styles/index.css'
+import { Text, StyleSheet, View, Image, TouchableHighlight} from 'react-native'
 
 export default class ActionBar extends React.Component {
     // constructor(props) {
@@ -15,44 +16,39 @@ export default class ActionBar extends React.Component {
 
         // If it's index is the first it disable the button
         return(
-            <div>
-               <span>
-                <button  onClick ={() => {
+            <View>
+
+                <TouchableHighlight  onPress ={() => {
                     if ((this.props.currentIndex ) !== 0) {
                         this.props.onChangeQuestion('previuosQ')
                     }
                 }
                 }
-                     className = {(this.props.currentIndex) === 0 ? "no_clickable" : "clickable"}>
+                >
                     Previous
-                </button>
-               </span>
+                </TouchableHighlight>
 
-                <span>
-                <button onClick={ () => {
+                <TouchableHighlight onPress={ () => {
                     this.props.onSubmit()
                     }
                 }
                 >
                     Submit
-                </button>
-               </span>
+                </TouchableHighlight>
 
-                <span>
-                <button
-                    onClick = {  () =>{
+                <TouchableHighlight
+                    onPress = {  () =>{
                         // Only if the index + 1 is not the length, it runs.
                         if((this.props.currentIndex+1) !== this.props.questionsLength){
                             this.props.onChangeQuestion('nextQ')
                         }
                     }
                 }
-                    className = {(this.props.currentIndex+1) === this.props.questionsLength ? "no_clickable" : "clickable"}
                 >
                     Next
-                </button>
-               </span>
-            </div>
+                </TouchableHighlight>
+
+            </View>
         )
     }
 }
