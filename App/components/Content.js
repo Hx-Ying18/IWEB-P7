@@ -28,8 +28,17 @@ export default class Content extends React.Component {
             {/*finished = {this.props.finished}*/}
         {/*/>*/}
         return(
-            <View style={{flex: 1}}>
-                <Imagen question={this.props.currentQuestion}/>
+            <View style={{flex: 1}} >
+                <View>
+                    <Imagen question={this.props.currentQuestion}/>
+                </View>
+                <View>
+                    <Question
+                        currentIndex = {this.props.currentIndex}
+                        currentQuestion={this.props.currentQuestion}
+                    />
+                </View>
+
             </View>
         )
     }

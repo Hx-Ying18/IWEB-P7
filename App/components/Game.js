@@ -34,20 +34,17 @@ export default class Game extends React.Component {
         } else {
             return(
 
-                <View>
-                    <Content
-                        currentQuestion={this.props.currentQuestion}
-                        currentIndex = {this.props.currentIndex}
-                        onIntroduceAnswerGame = {this.props.onIntroduceAnswer}
-                        finished = {this.props.finished}
-                        score = {this.props.score}
-                    />
-                    <ActionBar
-                        onChangeQuestion = {this.props.onChangeQuestion}
-                        currentIndex = {this.props.currentIndex}
-                        questionsLength = {this.props.questionsLength}
-                        onSubmit = {this.props.onSubmit}
-                    />
+                <View style={{flex: 1, alingments: 'stretch'}}>
+                    <View style={{flex:1}}>
+                        <Content
+                            currentQuestion={this.props.currentQuestion}
+                            currentIndex = {this.props.currentIndex}
+                            onIntroduceAnswerGame = {this.props.onIntroduceAnswer}
+                            finished = {this.props.finished}
+                            score = {this.props.score}
+                        />
+                    </View>
+
                 </View>
             )
         }
