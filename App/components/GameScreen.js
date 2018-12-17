@@ -28,8 +28,8 @@ class GameScreen extends Component {
     }
 
   render() {
-    // console.log('Props in GameScreen')
-    // console.log(this.props);
+     console.log('Props in GameScreen')
+     console.log(this.props);
       // It is checked it is changed the first userAnswer
     //console.log(this.props.questions[this.props.indexCurrentQuestion])
       // In Game i say to create as props the question i want to handle

@@ -11,17 +11,13 @@ export default class Answer extends React.Component {
         // console.log(this.props.onIntroduceAnswer);
         return(
             <View>
-                <View>
-                    <Text style={styles.h2}> Answer</Text>
-                    <TextInput
-                        style={{height: 80, fontSize: 20}}
-                        placeholder={this.props.currentQuestion.userAnswer || 'Type here'}
-                        onChangeText={(text)=>{this.props.onIntroduceAnswer(text);}}/>
-                </View>
-                <View>
-                    <Text style={styles.h2} > Tips </Text>
-                    <Tips currentQuestion = {this.props.currentQuestion} />
-                </View>
+                <Text style={styles.h2}> Answer</Text>
+                <TextInput
+                    style={{height: 80, fontSize: 20}}
+                    placeholder={this.props.currentQuestion.userAnswer || 'Type here'}
+                    onChangeText={(text)=>{this.props.onIntroduceAnswer(text);}}/>
+                <Text style={styles.h2} > Tips </Text>
+                <Tips currentQuestion = {this.props.currentQuestion} />
             </View>
         )
     }
