@@ -34,7 +34,7 @@ export default class Content extends React.Component {
                 </View>
                 <View>
                     <Question
-                        currentIndex = {this.props.currentIndex}
+                        currentIndex = {thisa.props.currentIndex}
                         currentQuestion={this.props.currentQuestion}
                     />
                 </View>
