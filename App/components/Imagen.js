@@ -10,9 +10,6 @@ export default class Imagen extends React.Component {
         console.log('"'+this.props.question.attachment.url+'"')
         return(
             <View style={{flex: 1}}>
-                <Text style={{fontSize: 30}}>
-                    Worksss
-                </Text>
                 <Image
                 source={{uri: '"'+this.props.question.attachment.url+'"'}}
                 style={{flex:3}}

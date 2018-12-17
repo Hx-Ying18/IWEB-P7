@@ -15,22 +15,24 @@ export default class Content extends React.Component {
         // console.log('It gets the onIntroduceAnswer in Content');
         // console.log(this.props.onIntroduceAnswerGame);
 
-        {/*<Question*/}
-            {/*currentIndex = {this.props.currentIndex}*/}
-            {/*currentQuestion={this.props.currentQuestion}*/}
-        {/*/>*/}
-        {/*<Answer*/}
-        {/*currentQuestion={this.props.currentQuestion}*/}
-        {/*onIntroduceAnswer = { this.props.onIntroduceAnswerGame}*/}
-        {/*/>*/}
-        {/*<Score*/}
-            {/*score = {this.props.score}*/}
-            {/*finished = {this.props.finished}*/}
-        {/*/>*/}
+
         return(
-            <View style={{flex: 1}}>
+            <View>
                 <Imagen question={this.props.currentQuestion}/>
+                <Question
+                    currentIndex = {this.props.currentIndex}
+                    currentQuestion={this.props.currentQuestion}
+                />
+                <Answer
+                    currentQuestion={this.props.currentQuestion}
+                    onIntroduceAnswer = { this.props.onIntroduceAnswerGame}
+                />
+                <Score
+                    score = {this.props.score}
+                    finished = {this.props.finished}
+                />
             </View>
+
         )
     }
 }
