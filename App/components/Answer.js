@@ -9,6 +9,8 @@ export default class Answer extends React.Component {
         // console.log(this.props.currentQuestion);
         // console.log('It gets the onIntroduceAnswer in Answer');
         // console.log(this.props.onIntroduceAnswer);
+
+        // valueTextInput={this.props.currentQuestion.userAnswer || ''}
         return(
             <View>
                 <View style={{flex: 1,
@@ -18,8 +20,9 @@ export default class Answer extends React.Component {
                     <Text style={styles.h2}> Answer</Text>
                     <TextInput
                         style={{height: 80, fontSize: 20}}
-                        placeholder={this.props.currentQuestion.userAnswer || 'Type here'}
-                        onChangeText={(text)=>{this.props.onIntroduceAnswer(text);}}/>
+                        placeHolder="Type here"
+
+                        onChangeText={(valueTextInput)=>{this.props.onIntroduceAnswer(valueTextInput);}}/>
                 </View>
 
             </View>
