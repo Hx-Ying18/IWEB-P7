@@ -34,7 +34,7 @@ export default class Game extends React.Component {
         } else {
             return(
 
-                <View>
+                <View style={{flex: 1}}>
                     <Content
                         currentQuestion={this.props.currentQuestion}
                         currentIndex = {this.props.currentIndex}

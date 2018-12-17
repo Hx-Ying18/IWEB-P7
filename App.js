@@ -10,11 +10,7 @@ import ReduxProvider from "./App/redux/ReduxProvider";
 export default class App extends React.Component {
   render() {
     return (
-        <View>
             <ReduxProvider/>
-
-        </View>
-
     );
   }
 }

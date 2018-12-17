@@ -4,7 +4,7 @@ import { Text, StyleSheet, View} from 'react-native'
 export default class NavBar extends React.Component {
     render() {
         return(
-            <View>
+            <View style={{flex: 1}}>
                 <Text style={styles.h1}>
                     RandomQuiz
                 </Text>

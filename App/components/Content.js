@@ -5,6 +5,7 @@ import Imagen from "./Imagen";
 import Score from './Score'
 
 import { Text, StyleSheet, View} from 'react-native'
+import Tips from "./Tips";
 
 export default class Content extends React.Component {
 
@@ -17,7 +18,12 @@ export default class Content extends React.Component {
 
 
         return(
-            <View>
+            <View style={{
+                flex: 1,
+                flexDirection: 'column',
+                alignItems: 'center',
+                justifyContent: 'space-around'
+            }}>
                 <Imagen question={this.props.currentQuestion}/>
                 <Question
                     currentIndex = {this.props.currentIndex}
@@ -27,6 +33,8 @@ export default class Content extends React.Component {
                     currentQuestion={this.props.currentQuestion}
                     onIntroduceAnswer = { this.props.onIntroduceAnswerGame}
                 />
+                <Tips currentQuestion = {this.props.currentQuestion} />
+
                 <Score
                     score = {this.props.score}
                     finished = {this.props.finished}

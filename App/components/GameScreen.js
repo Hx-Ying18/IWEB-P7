@@ -38,7 +38,7 @@ class GameScreen extends Component {
       // console.log(this.props.questions.length);
 
     return (
-      <View>
+      <View style={{flex: 1, margin: 10}}>
         <NavBar/>
         <Game
             currentQuestion={this.props.questions[this.props.indexCurrentQuestion]}

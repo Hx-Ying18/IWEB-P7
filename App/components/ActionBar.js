@@ -15,7 +15,12 @@ export default class ActionBar extends React.Component {
 
         // If it's index is the first it disable the button
         return(
-            <View>
+            <View style={{
+                flex: 1,
+                flexDirection: 'row',
+                alignItems: 'center',
+                justifyContent: 'space-around'
+            }}>
                 <TouchableHighlight onPress ={() => {
                     if ((this.props.currentIndex ) !== 0) {
                         this.props.onChangeQuestion('previuosQ')

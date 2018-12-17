@@ -12,7 +12,11 @@ export default class Question extends React.Component {
         // console.log(this.props.currentIndex);
 
         return(
-            <View>
+            <View style={{flex:1,
+                flexDirection: 'row',
+                alignItems: 'center',
+                justifyContent: 'space-around'
+            }}>
                 <Text style={styles.h2}>Question {this.props.currentIndex + 1} </Text>
                 <Text style={styles.h3}>{this.props.currentQuestion.question} </Text>
             </View>

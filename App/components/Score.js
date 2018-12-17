@@ -4,7 +4,10 @@ import { Text, StyleSheet, View, Image} from 'react-native'
 export default class Score extends React.Component {
 	render() {
 		return(
-			<View>
+			<View style={{flex:1,
+				flexDirection: 'row',
+				alignItems: 'center',
+				justifyContent: 'space-around'}}>
 				<Text style={styles.h2}>Score:</Text>
 				<Text style={styles.h3}>
 					{this.props.finished ? this.props.score+'/10' : "No answer, no score"}

@@ -34,9 +34,9 @@ export default class ReduxProvider extends React.Component{
     render() {
         return (
             <Provider store={this.store}>
-                <View>
-                    <GameScreen />
-                </View>
+
+                <GameScreen />
+
             </Provider>
         )
     }
