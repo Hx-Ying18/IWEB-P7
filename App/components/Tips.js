@@ -36,6 +36,6 @@ const styles = StyleSheet.create({
     h2:{
         textAlign: 'center',
         fontSize: 16,
-        padding: 10
+        padding: 10,
     }
 });

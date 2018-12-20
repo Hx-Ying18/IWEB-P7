@@ -19,7 +19,7 @@ export default class Content extends React.Component {
 
         return(
             <View style={{
-                flex: 1,
+                flex: 3,
                 flexDirection: 'column',
                 alignItems: 'center',
                 justifyContent: 'space-around'
