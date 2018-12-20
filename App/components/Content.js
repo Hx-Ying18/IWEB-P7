@@ -24,15 +24,19 @@ export default class Content extends React.Component {
                 alignItems: 'center',
                 justifyContent: 'space-around'
             }}>
+
                 <Imagen question={this.props.currentQuestion}/>
+
                 <Question
                     currentIndex = {this.props.currentIndex}
                     currentQuestion={this.props.currentQuestion}
                 />
+
                 <Answer
                     currentQuestion={this.props.currentQuestion}
                     onIntroduceAnswer = { this.props.onIntroduceAnswerGame}
                 />
+
                 <Tips currentQuestion = {this.props.currentQuestion} />
 
                 <Score

@@ -8,6 +8,10 @@ export default class Tips extends React.Component {
         // console.log(this.props.currentQuestion);
         // console.log('It gets the onIntroduceAnswer in Answer');
         // console.log(this.props.onIntroduceAnswer);
+
+        let tips = {key: '"'+this.props.currentQuestion.tips[0]+'"'};
+
+        //  data={{key: '"'+this.props.currentQuestion.tips[0]+'"'}}
         return(
             <View style={{flex: 1,
                 flexDirection: 'row',
@@ -15,7 +19,7 @@ export default class Tips extends React.Component {
                 justifyContent: 'space-around'}}>
                     <Text style={styles.h2} > Tips: </Text>
                     <FlatList
-                        data={this.props.currentQuestion.tips}
+                        data={tips}
                         renderItem={({item}) =>
                             <Text style={{fontSize: 30}}> {item.key} </Text>
                         }
