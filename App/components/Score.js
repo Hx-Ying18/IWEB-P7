@@ -6,8 +6,7 @@ export default class Score extends React.Component {
 		return(
 			<View style={{flex:1,
 				flexDirection: 'row',
-				alignItems: 'center',
-				justifyContent: 'space-around'}}>
+				alignItems: 'center'}}>
 				<Text style={styles.h2}>Score:</Text>
 				<Text style={styles.h3}>
 					{this.props.finished ? this.props.score+'/10' : "No answer, no score"}
@@ -21,11 +20,13 @@ const styles = StyleSheet.create({
 	h2:{
 		textAlign: 'center',
 		fontSize: 16,
-		padding: 10
+		padding: 10,
+		flex: 1
 	},
 	h3:{
 		textAlign: 'center',
 		fontSize: 10,
-		padding: 10
+		padding: 10,
+		flex: 1
 	}
 });

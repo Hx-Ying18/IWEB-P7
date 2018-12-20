@@ -34,7 +34,7 @@ export default class Game extends React.Component {
         } else {
             return(
 
-                <View style={{flex: 4 }}>
+                <View style={{flex: 4, flexDirection: 'column', alignItems: 'center'}}>
                     <Content
                         currentQuestion={this.props.currentQuestion}
                         currentIndex = {this.props.currentIndex}
@@ -42,6 +42,7 @@ export default class Game extends React.Component {
                         finished = {this.props.finished}
                         score = {this.props.score}
                     />
+
                     <ActionBar
                         onChangeQuestion = {this.props.onChangeQuestion}
                         currentIndex = {this.props.currentIndex}
@@ -59,6 +60,7 @@ const styles = StyleSheet.create({
     h3:{
         textAlign: 'center',
         fontSize: 10,
-        padding: 10
+        padding: 10,
+        flex: 4
     }
 });

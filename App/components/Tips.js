@@ -15,8 +15,7 @@ export default class Tips extends React.Component {
         return(
             <View style={{flex: 1,
                 flexDirection: 'row',
-                alignItems: 'center',
-                justifyContent: 'space-around'}}>
+                alignItems: 'center'}}>
                     <Text style={styles.h2} > Tips: </Text>
                     <FlatList
                         data={tips}
@@ -37,5 +36,6 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         fontSize: 16,
         padding: 10,
+        flex: 1
     }
 });

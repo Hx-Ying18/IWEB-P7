@@ -21,8 +21,8 @@ export default class Content extends React.Component {
             <View style={{
                 flex: 3,
                 flexDirection: 'column',
-                alignItems: 'center',
-                justifyContent: 'space-around'
+                justifyContent: 'flex-start',
+                alignItems: 'center'
             }}>
 
                 <Imagen question={this.props.currentQuestion}/>
@@ -31,6 +31,8 @@ export default class Content extends React.Component {
                     currentIndex = {this.props.currentIndex}
                     currentQuestion={this.props.currentQuestion}
                 />
+
+
 
                 <Answer
                     currentQuestion={this.props.currentQuestion}

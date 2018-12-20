@@ -13,7 +13,7 @@ export default class Imagen extends React.Component {
                 <Image
                 source={{uri: this.props.question.attachment.url}}
                 resizeMode="contain"
-                style={{width: 200, height: 200}}
+                style={{width: 400, height: 400}}
                 />
             </View>
 

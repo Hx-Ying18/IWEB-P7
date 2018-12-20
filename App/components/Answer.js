@@ -15,13 +15,11 @@ export default class Answer extends React.Component {
             <View>
                 <View style={{flex: 1,
                     flexDirection: 'row',
-                    alignItems: 'center',
-                    justifyContent: 'space-around'}}>
+                    alignItems: 'center'}}>
                     <Text style={styles.h2}> Answer</Text>
                     <TextInput
                         style={{height: 80, fontSize: 20}}
                         placeHolder="Type here"
-
                         onChangeText={(valueTextInput)=>{this.props.onIntroduceAnswer(valueTextInput);}}/>
                 </View>
 
