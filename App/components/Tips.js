@@ -9,7 +9,14 @@ export default class Tips extends React.Component {
         // console.log('It gets the onIntroduceAnswer in Answer');
         // console.log(this.props.onIntroduceAnswer);
 
-        let tips = {key: '"'+this.props.currentQuestion.tips[0]+'"'};
+        // let tips1 = {key: '"'+this.props.currentQuestion.tips[0]+'"'};
+
+        let tips = this.props.currentQuestion.tips.map((tip, i)=> {
+            console.log(this.props.currentQuestion.tips[i])
+            return {key: '"' + this.props.currentQuestion.tips[i] + '"'}
+        }
+    )
+
 
         //  data={{key: '"'+this.props.currentQuestion.tips[0]+'"'}}
         return(
@@ -34,7 +41,7 @@ const styles = StyleSheet.create({
 
     h2:{
         textAlign: 'center',
-        fontSize: 16,
+        fontSize: 12,
         padding: 10,
 
     }

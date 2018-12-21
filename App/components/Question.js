@@ -13,7 +13,7 @@ export default class Question extends React.Component {
 
         return(
             <View style={{flex:1,
-                flexDirection: 'row',
+                flexDirection: 'column',
                 alignItems: 'center',
                 margin: 20
             }}>

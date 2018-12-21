@@ -28,13 +28,12 @@ export default class Game extends React.Component {
 
         if(this.props.fetch.fetching){
             return <Text style={styles.h2}> Wait while we fetch </Text>
-        } else if(this.props.fetch.fetching === false && this.props.fetch.error){
+        }else if(this.props.fetch.fetching === false && this.props.fetch.error){
             console.log(this.props.fetch.error);
-            return <Text style={styles.h2}> Error getting state from server </Text>
-        } else {
+            return <Text style={styles.h2}> Error getting state from server</Text>
+        }else {
             return(
-
-                <View style={{flex: 6, flexDirection: 'column', alignItems: 'center'}}>
+                <View style={{flex: 8, flexDirection: 'column', alignItems: 'center'}}>
                     <Content
                         currentQuestion={this.props.currentQuestion}
                         currentIndex = {this.props.currentIndex}
@@ -42,7 +41,6 @@ export default class Game extends React.Component {
                         finished = {this.props.finished}
                         score = {this.props.score}
                     />
-
                     <ActionBar
                         onChangeQuestion = {this.props.onChangeQuestion}
                         currentIndex = {this.props.currentIndex}
