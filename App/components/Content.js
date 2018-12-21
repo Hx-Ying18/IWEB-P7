@@ -19,20 +19,20 @@ export default class Content extends React.Component {
 
         return(
             <View style={{
-                flex: 3,
+                flex: 8,
                 flexDirection: 'column',
                 justifyContent: 'flex-start',
                 alignItems: 'center'
             }}>
 
-                <Imagen question={this.props.currentQuestion}/>
+
 
                 <Question
                     currentIndex = {this.props.currentIndex}
                     currentQuestion={this.props.currentQuestion}
                 />
 
-
+                <Imagen question={this.props.currentQuestion}/>
 
                 <Answer
                     currentQuestion={this.props.currentQuestion}

@@ -13,14 +13,14 @@ export default class Tips extends React.Component {
 
         //  data={{key: '"'+this.props.currentQuestion.tips[0]+'"'}}
         return(
-            <View style={{flex: 1,
-                flexDirection: 'row',
+            <View style={{flex: 3,
+                flexDirection: 'column',
                 alignItems: 'center'}}>
                     <Text style={styles.h2} > Tips: </Text>
                     <FlatList
                         data={tips}
                         renderItem={({item}) =>
-                            <Text style={{fontSize: 30}}> {item.key} </Text>
+                            <Text style={{fontSize: 20}}> {item.key} </Text>
                         }
                     />
             </View>
@@ -36,6 +36,6 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         fontSize: 16,
         padding: 10,
-        flex: 1
+
     }
 });

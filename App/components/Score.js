@@ -20,13 +20,11 @@ const styles = StyleSheet.create({
 	h2:{
 		textAlign: 'center',
 		fontSize: 16,
-		padding: 10,
-		flex: 1
+		padding: 10
 	},
 	h3:{
 		textAlign: 'center',
-		fontSize: 10,
-		padding: 10,
-		flex: 1
+		fontSize: 20,
+		padding: 10
 	}
 });

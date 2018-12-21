@@ -14,10 +14,11 @@ export default class Question extends React.Component {
         return(
             <View style={{flex:1,
                 flexDirection: 'row',
-                alignItems: 'center'
+                alignItems: 'center',
+                margin: 20
             }}>
                 <Text style={styles.h2}>Question {this.props.currentIndex + 1} </Text>
-                <Text style={styles.h3}>{this.props.currentQuestion.question} </Text>
+                <Text style={styles.h1}>{this.props.currentQuestion.question} </Text>
             </View>
         )
     }
@@ -25,6 +26,11 @@ export default class Question extends React.Component {
 
 const styles = StyleSheet.create({
 
+    h1:{
+        textAlign: 'center',
+        fontSize: 16,
+        padding: 20
+    },
     h2:{
         textAlign: 'center',
         fontSize: 16,

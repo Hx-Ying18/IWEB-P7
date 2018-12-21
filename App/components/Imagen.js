@@ -9,11 +9,14 @@ export default class Imagen extends React.Component {
         console.log("Here is the url");
         console.log('"'+this.props.question.attachment.url+'"');
         return(
-            <View style={{flex: 1}}>
+            <View style={{
+                flex: 8,
+                flexDirection: 'row',
+                justifyContent: 'center'}}>
                 <Image
                 source={{uri: this.props.question.attachment.url}}
                 resizeMode="contain"
-                style={{width: 400, height: 400}}
+                style={{width: 300, height: 300}}
                 />
             </View>
 

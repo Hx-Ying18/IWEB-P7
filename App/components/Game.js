@@ -27,14 +27,14 @@ export default class Game extends React.Component {
         // console.log(this.props.fetch);
 
         if(this.props.fetch.fetching){
-            return <Text style={styles.h3}> Wait while we fetch </Text>
+            return <Text style={styles.h2}> Wait while we fetch </Text>
         } else if(this.props.fetch.fetching === false && this.props.fetch.error){
             console.log(this.props.fetch.error);
-            return <Text style={styles.h3}> Error getting state from server </Text>
+            return <Text style={styles.h2}> Error getting state from server </Text>
         } else {
             return(
 
-                <View style={{flex: 4, flexDirection: 'column', alignItems: 'center'}}>
+                <View style={{flex: 6, flexDirection: 'column', alignItems: 'center'}}>
                     <Content
                         currentQuestion={this.props.currentQuestion}
                         currentIndex = {this.props.currentIndex}
@@ -57,10 +57,18 @@ export default class Game extends React.Component {
 }
 
 const styles = StyleSheet.create({
+    h2:{
+        textAlign: 'center',
+        fontSize: 20,
+        padding: 10,
+        flex: 6,
+        justifyContent: 'center'
+    },
     h3:{
         textAlign: 'center',
         fontSize: 10,
         padding: 10,
-        flex: 4
+        flex: 6,
+        justifyContent: 'center'
     }
 });

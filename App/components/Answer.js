@@ -12,17 +12,15 @@ export default class Answer extends React.Component {
 
         // valueTextInput={this.props.currentQuestion.userAnswer || ''}
         return(
-            <View>
-                <View style={{flex: 1,
-                    flexDirection: 'row',
-                    alignItems: 'center'}}>
-                    <Text style={styles.h2}> Answer</Text>
-                    <TextInput
-                        style={{height: 80, fontSize: 20}}
-                        placeHolder="Type here"
-                        onChangeText={(valueTextInput)=>{this.props.onIntroduceAnswer(valueTextInput);}}/>
-                </View>
-
+            <View style={{flex: 1,
+                flexDirection: 'row',
+                justifyContent: 'flex-end',
+                alignItems: 'center'}}>
+                <Text style={styles.h2}> Answer</Text>
+                <TextInput
+                    style={{height: 80, fontSize: 20}}
+                    placeHolder="Type here"
+                    onChangeText={(valueTextInput)=>{this.props.onIntroduceAnswer(valueTextInput);}}/>
             </View>
         )
     }

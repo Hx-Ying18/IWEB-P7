@@ -22,7 +22,7 @@ export default class ActionBar extends React.Component {
                 justifyContent: 'space-around'
             }}>
                 <TouchableHighlight onPress ={() => {
-                    if ((this.props.currentIndex ) !== 0) {
+                    if ((this.props.currentIndex) !== 0) {
                         this.props.onChangeQuestion('previuosQ')
                     }
                 }
@@ -32,7 +32,6 @@ export default class ActionBar extends React.Component {
                         Previous
                     </Text>
                 </TouchableHighlight>
-
                 <TouchableHighlight onPress={ () => {
                     this.props.onSubmit()
                     }
@@ -43,7 +42,6 @@ export default class ActionBar extends React.Component {
                     </Text>
 
                 </TouchableHighlight>
-
                 <TouchableHighlight
                     onPress = {  () =>{
                         // Only if the index + 1 is not the length, it runs.
@@ -57,7 +55,6 @@ export default class ActionBar extends React.Component {
                         Next
                     </Text>
                 </TouchableHighlight>
-
             </View>
         )
     }
