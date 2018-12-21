@@ -7,13 +7,11 @@ export default class Question extends React.Component {
     //
     // }
     render(){
-
         // console.log('indexCurrent');
         // console.log(this.props.currentIndex);
-
         return(
             <View style={{flex:1,
-                flexDirection: 'column',
+                flexDirection: 'row',
                 alignItems: 'center',
                 margin: 20
             }}>

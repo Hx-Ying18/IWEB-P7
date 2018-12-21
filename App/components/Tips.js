@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text, StyleSheet, View, Image, TextInput, FlatList} from 'react-native'
+import { Text, StyleSheet, View, Image, TextInput, FlatList, ScrollView} from 'react-native'
 
 export default class Tips extends React.Component {
 
@@ -27,7 +27,7 @@ export default class Tips extends React.Component {
                     <FlatList
                         data={tips}
                         renderItem={({item}) =>
-                            <Text style={{fontSize: 20}}> {item.key} </Text>
+                            <Text style={{fontSize: 10}}> {item.key} </Text>
                         }
                     />
             </View>
