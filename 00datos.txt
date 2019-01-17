@@ -1,5 +1,7 @@
  This project was done by **Hengxuan Ying** and **Adrián Blázquez León**
 
+ It is run in Android
+
   It has been done the following tasks:
 
   - [x] Bajarse las preguntas del servidor.
